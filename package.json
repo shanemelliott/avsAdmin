@@ -1,0 +1,30 @@
+{
+  "name": "avs-admin-userclass-report",
+  "version": "1.0.0",
+  "description": "AVS Administration - User Class Report Generator for VistA stations",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test:vista": "node tests/testVista.js",
+    "test:duz": "node tests/testDuzLookup.js"
+  },
+  "keywords": [
+    "vista",
+    "avs",
+    "user-class",
+    "report",
+    "rpc"
+  ],
+  "author": "VA VEText Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "csv-parse": "^5.6.0",
+    "fast-csv": "^4.3.6"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
