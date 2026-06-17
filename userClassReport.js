@@ -155,7 +155,7 @@ class UserClassReport {
             csvStream.end();
 
             ws.on('finish', () => {
-                console.log(`\n✅ Report exported to: ${filepath}`);
+                console.log(`\n[OK] Report exported to: ${filepath}`);
                 resolve(filepath);
             });
 

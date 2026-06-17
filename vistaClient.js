@@ -100,14 +100,14 @@ class VistaClient {
             const url = `${this.baseUrl}/vista-sites/${stationNo}/users/${duz}/rpc/invoke`;
             
             // Only log details for debugging if needed
-            // console.log(`\n🔍 Station ${stationNo} - RPC Call Details:`);
+            // console.log(`\n[DEBUG] Station ${stationNo} - RPC Call Details:`);
 
             const response = await this.axios.post(url, rpcRequest, {
                 headers: { 'authorization': `Bearer ${token}` }
             });
 
             // Log raw response for debugging (only if small)
-            // console.log(`\n🔍 Station ${stationNo} - Raw RPC Response:`);
+            // console.log(`\n[DEBUG] Station ${stationNo} - Raw RPC Response:`);
             // console.log('   Payload:', response.data.payload || '(empty)');
 
             // Parse response to get DUZs

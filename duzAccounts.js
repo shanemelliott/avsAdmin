@@ -44,11 +44,11 @@ function loadAccounts() {
             }
         }
 
-        console.log(`📋 Loaded ${accountsCache.size} DUZ accounts from ${config.report.accountsFile}`);
+        console.log(`[OK] Loaded ${accountsCache.size} DUZ accounts from ${config.report.accountsFile}`);
         return accountsCache;
 
     } catch (error) {
-        console.error(`❌ Failed to load ${config.report.accountsFile}:`, error.message);
+        console.error(`[ERROR] Failed to load ${config.report.accountsFile}:`, error.message);
         throw error;
     }
 }
