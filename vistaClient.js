@@ -63,7 +63,7 @@ class VistaClient {
      * Get users by user class IEN
      * @param {string} stationNo - Station number (e.g., "605")
      * @param {string} userClassIEN - User class IEN to filter by
-     * @returns {Promise<Array>} Array of {ien, name, disuser, terminationDate, stationNo}
+     * @returns {Promise<Array>} Array of {ien, name, stationNo}
      */
     async getUsersByClass(stationNo, userClassIEN) {
         const duz = this.getDuzForStation(stationNo);
@@ -178,8 +178,6 @@ class VistaClient {
                 const user = {
                     ien: parts[1],  // Person IEN (field .01 from File 8930.3)
                     name: parts[2] || parts[1],  // Person name if available
-                    disuser: '',  // Not available from File 8930.3
-                    terminationDate: '',  // Not available from File 8930.3
                     stationNo: stationNo
                 };
                 if (lines.length <= 10) {
@@ -281,7 +279,7 @@ class VistaClient {
      * Get user information by DUZ
      * @param {string} stationNo - Station number
      * @param {string} userDuz - User DUZ to look up
-     * @returns {Promise<Object>} User details {ien, name, disuser, terminationDate}
+     * @returns {Promise<Object>} User details {ien, name}
      */
     async getUserInfoByDuz(stationNo, userDuz) {
         const accountDuz = this.getDuzForStation(stationNo);
@@ -321,9 +319,7 @@ class VistaClient {
             if (userData) {
                 return {
                     ien: userData.IEN?.toString() || userDuz,
-                    name: userData.Name || '',
-                    disuser: '', // Not available in this RPC
-                    terminationDate: '' // Not available in this RPC
+                    name: userData.Name || ''
                 };
             }
         } catch (error) {

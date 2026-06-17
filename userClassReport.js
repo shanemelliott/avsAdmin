@@ -110,9 +110,7 @@ class UserClassReport {
                     userClassIEN: classInfo.userClassIEN,
                     userClassName: classInfo.userClassName,
                     userIEN: user.ien,
-                    userName: user.name,
-                    disuser: user.disuser,
-                    terminationDate: user.terminationDate
+                    userName: user.name
                 });
                 this.stats.usersFound++;
             }
@@ -150,9 +148,7 @@ class UserClassReport {
                     'User Class IEN': record.userClassIEN,
                     'User Class Name': record.userClassName,
                     'User IEN': record.userIEN,
-                    'User Name': record.userName,
-                    'DISUSER': record.disuser,
-                    'Termination Date': record.terminationDate
+                    'User Name': record.userName
                 });
             }
 

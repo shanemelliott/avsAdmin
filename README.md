@@ -174,18 +174,16 @@ Reports are saved to `results/userclass_report_YYYY-MM-DD_HH-MM-SS.csv` with tim
 | Station | Station number | 605 |
 | User Class IEN | Internal entry number | 667 |
 | User Class Name | Class name | AVS ADMINISTRATOR |
-| User IEN | User IEN in File 200 | 81821 |
+| User IEN | User IEN in File 200 | 12345 |
 | User Name | User's name | SMITH,JOHN |
-| DISUSER | Not populated via RPC | |
-| Termination Date | Not populated via RPC | |
 
 ### Sample Output
 
 ```csv
-Station,User Class IEN,User Class Name,User IEN,User Name,DISUSER,Termination Date
-605,667,AVS ADMINISTRATOR,12345,SMITH JOHN,,
-605,667,AVS ADMINISTRATOR,23456,DOE JANE,,
-664,870,AVS ADMINISTRATOR,34567,BROWN SAM,,
+Station,User Class IEN,User Class Name,User IEN,User Name
+605,667,AVS ADMINISTRATOR,12345,SMITH JOHN
+605,667,AVS ADMINISTRATOR,23456,DOE JANE
+664,870,AVS ADMINISTRATOR,34567,BROWN SAM
 ```
 
 ### Console Output
