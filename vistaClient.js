@@ -176,7 +176,7 @@ class VistaClient {
             
             if (parts.length >= 2) {
                 const user = {
-                    ien: parts[1],  // Person IEN (field .01 from File 8930.3)
+                    ien: parts[1],  // DUZ (field .01 from File 8930.3)
                     name: parts[2] || parts[1],  // Person name if available
                     stationNo: stationNo
                 };

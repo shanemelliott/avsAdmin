@@ -109,7 +109,7 @@ class UserClassReport {
                     stationNo: sta3n,
                     userClassIEN: classInfo.userClassIEN,
                     userClassName: classInfo.userClassName,
-                    userIEN: user.ien,
+                    userDuz: user.ien,
                     userName: user.name
                 });
                 this.stats.usersFound++;
@@ -147,7 +147,7 @@ class UserClassReport {
                     'Station': record.stationNo,
                     'User Class IEN': record.userClassIEN,
                     'User Class Name': record.userClassName,
-                    'User IEN': record.userIEN,
+                    'DUZ': record.userDuz,
                     'User Name': record.userName
                 });
             }
